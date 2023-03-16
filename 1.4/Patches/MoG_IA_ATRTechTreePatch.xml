@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Realign ATR Techs and Unlocks for Industrial Automatons-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Android Tiers Reforged</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			<!-- Research Project Changes (Just the Tech Tree itself.) -->
+				<!-- ATR_T1Androids -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_T1Androids"]/researchViewX</xpath>
+					<value><researchViewX>1.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_T1Androids"]/researchViewY</xpath>
+					<value><researchViewY>3.55</researchViewY></value></li>
+				<!-- ATR_UtilityBiomimetics -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_UtilityBiomimetics"]/researchViewX</xpath>
+					<value><researchViewX>1.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_UtilityBiomimetics"]/researchViewY</xpath>
+					<value><researchViewY>0.35</researchViewY></value></li>
+				
+				<!-- ATR_MechanicalStandardization -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalStandardization"]/researchViewX</xpath>
+					<value><researchViewX>2.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalStandardization"]/researchViewY</xpath>
+					<value><researchViewY>4.00</researchViewY></value></li>
+				<!-- ATR_MassCharging -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MassCharging"]/researchViewX</xpath>
+					<value><researchViewX>3.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MassCharging"]/researchViewY</xpath>
+					<value><researchViewY>1.40</researchViewY></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MassCharging"]/prerequisites</xpath>
+					<value><prerequisites><li>ATR_MechanicalStandardization</li><li>ATR_AutonomousIndustrialization</li></prerequisites></value></li>
+				<!-- ATR_InterchangeableParts -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_InterchangeableParts"]/researchViewX</xpath>
+					<value><researchViewX>3.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_InterchangeableParts"]/researchViewY</xpath>
+					<value><researchViewY>2.60</researchViewY></value></li>
+				
+				<!-- ATR_MechanicalFrameworks -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalFrameworks"]/researchViewX</xpath>
+					<value><researchViewX>3.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalFrameworks"]/researchViewY</xpath>
+					<value><researchViewY>1.90</researchViewY></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalFrameworks"]/label</xpath>
+					<value><label>Basic framework enhancements</label></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalFrameworks"]/prerequisites</xpath>
+					<value><prerequisites><li>ATR_MechanicalStandardization</li></prerequisites></value></li>
+				
+				<!-- ATR_MechaniteAssistedRecovery -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechaniteAssistedRecovery"]/researchViewX</xpath>
+					<value><researchViewX>3.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechaniteAssistedRecovery"]/researchViewY</xpath>
+					<value><researchViewY>3.20</researchViewY></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechaniteAssistedRecovery"]/prerequisites</xpath>
+					<value><prerequisites><li>ATR_MechanicalStandardization</li></prerequisites></value></li>
+				<!-- ATR_MechanicalStimulators -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalStimulators"]/researchViewX</xpath>
+					<value><researchViewX>4.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalStimulators"]/researchViewY</xpath>
+					<value><researchViewY>2.95</researchViewY></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalStimulators"]/techLevel</xpath>
+					<value><techLevel>Industrial</techLevel></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalStimulators"]/prerequisites</xpath>
+					<value><prerequisites><li>ATR_MechaniteAssistedRecovery</li></prerequisites></value></li>
+				
+				<!-- ATR_StandardizedCommunications -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_StandardizedCommunications"]/researchViewX</xpath>
+					<value><researchViewX>3.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_StandardizedCommunications"]/researchViewY</xpath>
+					<value><researchViewY>4.50</researchViewY></value></li>
+				<!-- ATR_RemoteControlProtocols -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_RemoteControlProtocols"]/researchViewX</xpath>
+					<value><researchViewX>6.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_RemoteControlProtocols"]/researchViewY</xpath>
+					<value><researchViewY>5.00</researchViewY></value></li>
+				
+				<!-- ATR_MechanicalOptimization -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalOptimization"]/researchViewX</xpath>
+					<value><researchViewX>6.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MechanicalOptimization"]/researchViewY</xpath>
+					<value><researchViewY>4.00</researchViewY></value></li>
+				<!-- ATR_T2Androids -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_T2Androids"]/researchViewX</xpath>
+					<value><researchViewX>6.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_T2Androids"]/researchViewY</xpath>
+					<value><researchViewY>3.55</researchViewY></value></li>
+				<!-- ATR_MilitaryBiomimetics -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MilitaryBiomimetics"]/researchViewX</xpath>
+					<value><researchViewX>6.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MilitaryBiomimetics"]/researchViewY</xpath>
+					<value><researchViewY>0.30</researchViewY></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_MilitaryBiomimetics"]/prerequisites</xpath>
+					<value><prerequisites><li>ATR_UtilityBiomimetics</li><li>ATR_MilitaryFrameworks</li></prerequisites></value></li>
+				<!-- ATR_RepairOptimization -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_RepairOptimization"]/researchViewX</xpath>
+					<value><researchViewX>7.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_RepairOptimization"]/researchViewY</xpath>
+					<value><researchViewY>3.20</researchViewY></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_RepairOptimization"]/label</xpath>
+					<value><label>Mechanite repair optimization</label></value></li>
+				<!-- ATR_AdvancedMechParts -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_AdvancedMechParts"]/researchViewX</xpath>
+					<value><researchViewX>7.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_AdvancedMechParts"]/researchViewY</xpath>
+					<value><researchViewY>2.60</researchViewY></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_AdvancedMechParts"]/label</xpath>
+					<value><label>Enhanced parts</label></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_AdvancedMechParts"]/prerequisites</xpath>
+					<value><prerequisites><li>ATR_InterchangeableParts</li><li>ATR_MechanicalOptimization</li></prerequisites></value></li>
+				<!-- ATR_CoreAssistants -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_CoreAssistants"]/researchViewX</xpath>
+					<value><researchViewX>7.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_CoreAssistants"]/researchViewY</xpath>
+					<value><researchViewY>4.00</researchViewY></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_CoreAssistants"]/prerequisites</xpath>
+					<value><prerequisites><li>ATR_MechanicalOptimization</li></prerequisites></value></li>
+				<!-- ATR_T3Androids -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_T3Androids"]/researchViewX</xpath>
+					<value><researchViewX>8.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_T3Androids"]/researchViewY</xpath>
+					<value><researchViewY>3.55</researchViewY></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_T3Androids"]/prerequisites</xpath>
+					<value><prerequisites><li>ATR_T2Androids</li><li>ATR_CommunicationOptimization</li></prerequisites></value></li>
+				<!-- ATR_T4Androids -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_T4Androids"]/researchViewX</xpath>
+					<value><researchViewX>9.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_T4Androids"]/researchViewY</xpath>
+					<value><researchViewY>3.55</researchViewY></value></li>
+				
+				<!-- ATR_AdvancedMechanicalFrameworks -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_AdvancedMechanicalFrameworks"]/researchViewX</xpath>
+					<value><researchViewX>7.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_AdvancedMechanicalFrameworks"]/researchViewY</xpath>
+					<value><researchViewY>1.90</researchViewY></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_AdvancedMechanicalFrameworks"]/label</xpath>
+					<value><label>Advanced framework enhancements</label></value></li>
+				
+				<!-- ATR_CommunicationOptimization -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_CommunicationOptimization"]/researchViewX</xpath>
+					<value><researchViewX>7.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_CommunicationOptimization"]/researchViewY</xpath>
+					<value><researchViewY>4.50</researchViewY></value></li>
+				<!-- ATR_ServerOptimization -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_ServerOptimization"]/researchViewX</xpath>
+					<value><researchViewX>8.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_ServerOptimization"]/researchViewY</xpath>
+					<value><researchViewY>4.45</researchViewY></value></li>
+				<!-- ATR_SkyMindCore -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_SkyMindCore"]/researchViewX</xpath>
+					<value><researchViewX>9.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_SkyMindCore"]/researchViewY</xpath>
+					<value><researchViewY>4.45</researchViewY></value></li>
+				
+			<!-- Unlock Changes (Derivatives of Tech Tree changes.) -->
+				<!-- ATR_HydraulicFrame -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "ATR_HydraulicFrame"]</xpath>
+					<value><recipeMaker><researchPrerequisite>ATR_IndustrialUtilityFrameworks</researchPrerequisite></recipeMaker></value></li>
+				<!-- ATR_SuppressorFrame -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "ATR_SuppressorFrame"]</xpath>
+					<value><recipeMaker><researchPrerequisite>ATR_IndustrialUtilityFrameworks</researchPrerequisite></recipeMaker></value></li>
+				<!-- ATR_CompositePlating -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "ATR_CompositePlating"]</xpath>
+					<value><recipeMaker><researchPrerequisite>ATR_MilitaryFrameworks</researchPrerequisite></recipeMaker></value></li>
+			</operations>
+		</match>
+	</Operation>
+    
+</Patch>
