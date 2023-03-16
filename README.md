@@ -16,16 +16,16 @@ This mod reworks and expands upon features designed to be used with T1 and other
 ## Features
 * Complete re-layout of the tech tree to highlight synergistic upgrades for drones
 * Continuous Tread Leg
- - Zippy speeds! Only for droids who do field work and never need to go near combat...
- - Recommended for T1's
+  - Zippy speeds! Only for droids who do field work and never need to go near combat...
+  - Recommended for T1's
 
 Future Fun:
 * Recharge Throne
- - A chair for unfeeling cooks to charge and cook at the same time! (Hideously uncomfortable...)
+  - A chair for unfeeling cooks to charge and cook at the same time! (Hideously uncomfortable...)
 * Clankity Joints
- - Replacement joints with their own processors.
- - Will cause droids to automatically adopt rakish spacecowboy poses and lounge indolently on couches.
- - Mildly amusing for your other pawns. Warning; may make T1's appear to have personality.
+  - Replacement joints with their own processors.
+  - Will cause droids to automatically adopt rakish spacecowboy poses and lounge indolently on couches.
+  - Mildly amusing for your other pawns. Warning; may make T1's appear to have personality.
 
 Other Future Planned Stuff:
 * Spacer tech production mimetics
