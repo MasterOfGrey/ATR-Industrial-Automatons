@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<!-- Realign ATR Techs and Unlocks for Industrial Automatons-->
+	<!-- Realign ATR Techs and Unlocks, and Edit Recipes for Industrial Automatons-->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Android Tiers Reforged</li>
@@ -223,6 +223,40 @@
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/ThingDef[defName = "ATR_CompositePlating"]</xpath>
 					<value><recipeMaker><researchPrerequisite>ATR_MilitaryFrameworks</researchPrerequisite></recipeMaker></value></li>
+				
+			<!-- Patch Recipes -->
+				<!-- ATR_Make_NutritionBlockFromSolutionAndCapsules -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/RecipeDef[defName = "ATR_Make_NutritionBlockFromSolutionAndCapsules"]/recipeUsers</xpath>
+					<value><li>ATR_ProductRefinementTable</li></value></li>
+				
+			<!-- Patch Categories -->
+				<!-- ATR_ChemCapsule -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "ATR_ChemCapsule"]</xpath>
+					<value><thingCategories><li>ATR_MechanicalProducts</li></thingCategories></value></li>
+				<!-- ATR_NutrientSolution -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "ATR_NutrientSolution"]</xpath>
+					<value><thingCategories><li>ATR_MechanicalProducts</li></thingCategories></value></li>
+				<!-- ATR_NutritionBlock -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "ATR_NutritionBlock"]</xpath>
+					<value><thingCategories><li>ATR_MechanicalProducts</li></thingCategories></value></li>
+			
+			<!-- Patch Drones -->
+				<!-- ATR_DroneMineralUnit -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ATR_DroneMineralUnit"]/comps</xpath>
+					<value>
+						<comps>
+							<li Class="CompProperties_Shearable">
+								<woolDef>ATR_SteelFibres</woolDef>
+								<shearIntervalDays>5</shearIntervalDays>
+								<woolAmount>6250</woolAmount>
+							</li>
+						</comps>
+					</value></li>
 			</operations>
 		</match>
 	</Operation>

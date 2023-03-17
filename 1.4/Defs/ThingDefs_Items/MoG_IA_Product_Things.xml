@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>ATR_SteelFibres</defName>
+		<label>Steel fibres</label>
+		<description>Steel fibres, either produced by phytomining or stripped from steel. Their creation process makes them weakly magnetic which binds them into bunches just large enough to be handled... delicately. Can be smelted into steel or processed into other products.</description>
+		<graphicData>
+			<texPath>Things/SteelFibres</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>0.1</MarketValue>
+		  <Mass>0.002</Mass>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>4</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ATR_MechanicalProducts</li>
+		</thingCategories>
+		<stackLimit>20000</stackLimit>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>ATR_SteelYarn</defName>
+		<label>Metallic yarn</label>
+		<description>Faux textile formed from steel fibres spun to create a metallic yarn. Can be used as a fabric to make clothing at the expense of weight and lack of insulation.\n\n Not recommended for human colonists as the scratchy texture is sure to infuriate anyone without masochistic tendencies. Androids will not be affected.</description>
+		<graphicData>
+			<texPath>Things/SteelYarn</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<MarketValue>2.15</MarketValue>
+			<Mass>0.032</Mass>
+			<Flammability>1.2</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<StuffPower_Armor_Sharp>1.48</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.26</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>0.2</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>-2</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>-4</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<categories>
+				<li>Fabric</li>
+			</categories>
+			<commonality>0.01</commonality>
+			<color>(82,82,82)</color>
+			<statOffsets>
+				<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+				<ArmorRating_Heat>-0.1</ArmorRating_Heat>
+			</statOffsets>
+			<statFactors>
+				<WorkToMake>2</WorkToMake>
+				<Flammability>0.02</Flammability>
+				<MaxHitPoints>1.6</MaxHitPoints>
+			</statFactors>
+		</stuffProps>
+		<thingCategories>
+			<li>Textiles</li>
+			<li>ATR_MechanicalProducts</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>
