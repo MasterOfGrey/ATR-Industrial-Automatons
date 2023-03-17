@@ -189,7 +189,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>ATR_SteelFibres</li>
+						<li>ATR_SteelYarn</li>
 					</thingDefs>
 				</filter>
 				<count>15</count>
@@ -197,11 +197,11 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>ATR_SteelFibres</li>
+				<li>ATR_SteelYarn</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<ATR_SteelYarn>240</ATR_SteelYarn>
+			<ATR_SteelFibres>240</ATR_SteelFibres>
 		</products>
 		<skillRequirements>
 		  <Crafting>3</Crafting>
@@ -225,7 +225,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>ATR_SteelFibres</li>
+						<li>ATR_SteelYarn</li>
 					</thingDefs>
 				</filter>
 				<count>30</count>
@@ -233,11 +233,11 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>ATR_SteelFibres</li>
+				<li>ATR_SteelYarn</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<ATR_SteelYarn>480</ATR_SteelYarn>
+			<ATR_SteelFibres>480</ATR_SteelFibres>
 		</products>
 		<skillRequirements>
 		  <Crafting>3</Crafting>
@@ -357,7 +357,7 @@
 		<defName>ATR_Make_2_SteelInto_S_Fibres</defName>
 		<label>Strip bulk (x2) steel into fibres</label>
 		<description>Use a series of geared rollers and a lathe to breakdown steel into thin fibres. Some steel is unavoidably wasted in this process.</description>
-		<jobString>SStripping steel.</jobString>
+		<jobString>Stripping steel.</jobString>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Machining</soundWorking>
 		<workAmount>3200</workAmount>

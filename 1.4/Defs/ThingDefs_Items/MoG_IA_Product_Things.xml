@@ -24,7 +24,7 @@
 
 	<ThingDef ParentName="ResourceBase">
 		<defName>ATR_SteelYarn</defName>
-		<label>Metallic yarn</label>
+		<label>Steel yarn</label>
 		<description>Faux textile formed from steel fibres spun to create a metallic yarn. Can be used as a fabric to make clothing at the expense of weight and lack of insulation.\n\n Not recommended for human colonists as the scratchy texture is sure to infuriate anyone without masochistic tendencies. Androids will not be affected.</description>
 		<graphicData>
 			<texPath>Things/SteelYarn</texPath>

@@ -233,16 +233,16 @@
 			<!-- Patch Categories -->
 				<!-- ATR_ChemCapsule -->
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName = "ATR_ChemCapsule"]</xpath>
-					<value><thingCategories><li>ATR_MechanicalProducts</li></thingCategories></value></li>
+					<xpath>Defs/ThingDef[defName = "ATR_ChemCapsule"]/thingCategories</xpath>
+					<value><li>ATR_MechanicalProducts</li></value></li>
 				<!-- ATR_NutrientSolution -->
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName = "ATR_NutrientSolution"]</xpath>
-					<value><thingCategories><li>ATR_MechanicalProducts</li></thingCategories></value></li>
+					<xpath>Defs/ThingDef[defName = "ATR_NutrientSolution"]/thingCategories</xpath>
+					<value><li>ATR_MechanicalProducts</li></value></li>
 				<!-- ATR_NutritionBlock -->
 				<li Class="PatchOperationAdd">
-					<xpath>Defs/ThingDef[defName = "ATR_NutritionBlock"]</xpath>
-					<value><thingCategories><li>ATR_MechanicalProducts</li></thingCategories></value></li>
+					<xpath>Defs/ThingDef[defName = "ATR_NutritionBlock"]/thingCategories</xpath>
+					<value><li>ATR_MechanicalProducts</li></value></li>
 			
 			<!-- Patch Drones -->
 				<!-- ATR_DroneMineralUnit -->

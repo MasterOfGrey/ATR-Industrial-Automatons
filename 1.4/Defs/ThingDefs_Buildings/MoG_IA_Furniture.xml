@@ -3,7 +3,7 @@
 
 	<ThingDef ParentName="BenchBase">
 		<defName>ATR_ProductRefinementTable</defName>
-		<label>Mechanical parts workbench</label>
+		<label>Mech product refinement table</label>
 		<thingClass>Building_WorkTable</thingClass>
 		<description>A workbench that holds all equipment needed to process the various products of mechanical mimetics.</description>
 		<graphicData>
