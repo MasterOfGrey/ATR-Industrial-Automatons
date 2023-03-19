@@ -88,7 +88,7 @@
 	<ThingDef ParentName="LeatherBase">
 		<defName>ATR_PlasteelMatt</defName>
 		<label>Plasteel matt</label>
-		<description>Faux textile formed from steel fibres spun to create a metallic yarn. Can be used as a fabric to make clothing at the expense of weight and lack of insulation.\n\n Not recommended for human colonists as the scratchy texture is sure to infuriate anyone without masochistic tendencies. Androids will not be affected.</description>
+		<description>A metallic analogue of matted fur, which is then scraped and treated in a process similar to tanning leather. This faux leather formed from plasteel fibres can be used as a substitute for leather in any normal leather product. Requires significantly more work to use for crafting in this way.\n\n The unique structure and pseudo-bonds formed by the fibres of this material make it astonishingly resistant to sudden blunt force deformation, while remaining supple and flexible in the range of low-energy states associated with normal movement.</description>
 		<graphicData>
 			<texPath>Things/PlasteelMatt</texPath>
 			<graphicClass>Graphic_Single</graphicClass>

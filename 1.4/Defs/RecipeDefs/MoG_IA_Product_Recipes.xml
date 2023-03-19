@@ -40,7 +40,7 @@
 	</RecipeDef>
 	
 	<RecipeDef>
-		<defName>ATR_Make_5_S_FibresIntoYarn</defName>
+		<defName>ATR_Make_4_S_FibresIntoYarn</defName>
 		<label>Spin bulk (x4) steel fibres into steel yarn</label>
 		<description>Use special spinning tools to spin steel fibres into a wool-like yarn.</description>
 		<jobString>Spinning steel yarn.</jobString>
@@ -220,7 +220,7 @@
 	</RecipeDef>
 	
 	<RecipeDef>
-		<defName>ATR_Make_5_S_FibresInto_P_Fibres</defName>
+		<defName>ATR_Make_4_S_FibresInto_P_Fibres</defName>
 		<label>Impregnate bulk (x4) steel fibres into plasteel fibres</label>
 		<description>Process steel fibres in a chemical soup to transform them into plasteel.</description>
 		<jobString>Impregnating steel fibres.</jobString>
@@ -475,6 +475,96 @@
 		<workSkill>Crafting</workSkill>
 	    <recipeUsers>
             <li>ElectricSmelter</li>
+			<li>ATR_ProductRefinementTable</li>
+        </recipeUsers>
+	</RecipeDef>
+
+<!-- Make Plasteel Fibres into Other Things -->
+	<!-- Make Matt -->
+	<RecipeDef>
+		<defName>ATR_Make_P_FibresIntoMatt</defName>
+		<label>Process plasteel fibres into plasteel matt</label>
+		<description>Work fibres together between two vibrating, rubberised plates to form a fibrous matt. Then scrape the resulting matt over a fine mesh in a chemical bath, in a process similar to tanning a hide, to produce a matted plasteel faux leather analogue.</description>
+		<jobString>Creating plasteel matt.</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>1600</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PlasteelFibres</li>
+					</thingDefs>
+				</filter>
+				<count>240</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_ChemCapsule</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PlasteelFibres</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ATR_PlasteelMatt>15</ATR_PlasteelMatt>
+		</products>
+		<skillRequirements>
+		  <Crafting>3</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+	    <recipeUsers>
+			<li>ATR_ProductRefinementTable</li>
+        </recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>ATR_Make_4_P_FibresIntoMatt</defName>
+		<label>Process bulk (x4) plasteel fibres into plasteel matt</label>
+		<description>Work fibres together between two vibrating, rubberised plates to form a fibrous matt. Then scrape the resulting matt over a fine mesh in a chemical bath, in a process similar to tanning a hide, to produce a matted plasteel faux leather analogue.</description>
+		<jobString>Creating plasteel matt.</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>6400</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PlasteelFibres</li>
+					</thingDefs>
+				</filter>
+				<count>960</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_ChemCapsule</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PlasteelFibres</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ATR_PlasteelMatt>60</ATR_PlasteelMatt>
+		</products>
+		<skillRequirements>
+		  <Crafting>3</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+	    <recipeUsers>
 			<li>ATR_ProductRefinementTable</li>
         </recipeUsers>
 	</RecipeDef>
