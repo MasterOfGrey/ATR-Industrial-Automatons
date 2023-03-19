@@ -2,7 +2,7 @@
 <Defs>
 
 <!-- Make Steel Fibres into Other Things -->
-	<!-- Make Yarn -->
+	<!-- Make Steel Yarn from Fibres -->
 	<RecipeDef>
 		<defName>ATR_Make_S_FibresIntoYarn</defName>
 		<label>Spin steel fibres into steel yarn</label>
@@ -75,7 +75,7 @@
         </recipeUsers>
 	</RecipeDef>
 	
-	<!-- Make Steel -->
+	<!-- Make Steel from Fibres -->
 	<RecipeDef>
 		<defName>ATR_Make_S_FibresIntoSteel</defName>
 		<label>Smelt metal fibres into steel</label>
@@ -174,7 +174,7 @@
         </recipeUsers>
 	</RecipeDef>
 	
-	<!-- Make Plasteel Fibres -->
+	<!-- Make Plasteel Fibres from Steel Fibres-->
 	<RecipeDef>
 		<defName>ATR_Make_S_FibresInto_P_Fibres</defName>
 		<label>Impregnate steel fibres into plasteel fibres</label>
@@ -264,7 +264,7 @@
 	</RecipeDef>
 
 <!-- Make Steel Yarn into Other Things -->
-	<!-- Make Fibres -->
+	<!-- Make Steel Fibres from Yarn-->
 	<RecipeDef>
 		<defName>ATR_Make_S_YarnIntoFibres</defName>
 		<label>Card steel yarn into steel fibres</label>
@@ -337,7 +337,7 @@
         </recipeUsers>
 	</RecipeDef>
 	
-	<!-- Make Steel -->
+	<!-- Make Steel from Fibres -->
 	<RecipeDef>
 		<defName>ATR_Make_S_YarnIntoSteel</defName>
 		<label>Smelt steel yarn into steel</label>
@@ -404,7 +404,7 @@
 	</RecipeDef>
 
 <!-- Make Steel into Steel Things -->
-	<!-- Make Fibres -->
+	<!-- Make Fibres from Steel -->
 	<RecipeDef>
 		<defName>ATR_Make_SteelInto_S_Fibres</defName>
 		<label>Strip steel into fibres</label>
@@ -480,11 +480,11 @@
 	</RecipeDef>
 
 <!-- Make Plasteel Fibres into Other Things -->
-	<!-- Make Matt -->
+	<!-- Make Matt from Fibres -->
 	<RecipeDef>
 		<defName>ATR_Make_P_FibresIntoMatt</defName>
 		<label>Process plasteel fibres into plasteel matt</label>
-		<description>Work fibres together between two vibrating, rubberised plates to form a fibrous matt. Then scrape the resulting matt over a fine mesh in a chemical bath, in a process similar to tanning a hide, to produce a matted plasteel faux leather analogue.</description>
+		<description>Work fibres together between two vibrating, rubberised plates to form a fibrous matt. Then scrape the resulting matt over a fine mesh in a chemical bath, in a process similar to tanning a hide, to produce a matted plasteel faux leather analogue. This process is not reversible.</description>
 		<jobString>Creating plasteel matt.</jobString>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Machining</soundWorking>
@@ -528,7 +528,7 @@
 	<RecipeDef>
 		<defName>ATR_Make_4_P_FibresIntoMatt</defName>
 		<label>Process bulk (x4) plasteel fibres into plasteel matt</label>
-		<description>Work fibres together between two vibrating, rubberised plates to form a fibrous matt. Then scrape the resulting matt over a fine mesh in a chemical bath, in a process similar to tanning a hide, to produce a matted plasteel faux leather analogue.</description>
+		<description>Work fibres together between two vibrating, rubberised plates to form a fibrous matt. Then scrape the resulting matt over a fine mesh in a chemical bath, in a process similar to tanning a hide, to produce a matted plasteel faux leather analogue. This process is not reversible.</description>
 		<jobString>Creating plasteel matt.</jobString>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Machining</soundWorking>
@@ -568,5 +568,246 @@
 			<li>ATR_ProductRefinementTable</li>
         </recipeUsers>
 	</RecipeDef>
+	
+	<!-- Make Plasteel from Fibres -->
+	<RecipeDef>
+		<defName>ATR_Make_P_FibresIntoPlasteel</defName>
+		<label>Smelt metal fibres into plasteel</label>
+		<description>Use heat and strong electromagnets to smelt metal fibres into solid blocks.</description>
+		<jobString>Smelting metal.</jobString>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>20</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PlasteelFibres</li>
+					</thingDefs>
+				</filter>
+				<count>500</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PlasteelFibres</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Plasteel>2</Plasteel>
+		</products>
+	    <recipeUsers>
+            <li>ElectricSmelter</li>
+			<li>ATR_ProductRefinementTable</li>
+        </recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>ATR_Make_5_P_FibresIntoPlasteel</defName>
+		<label>Smelt bulk (x5) metal fibres into plasteel</label>
+		<description>Use heat and strong electromagnets to smelt metal fibres into solid blocks.</description>
+		<jobString>Smelting metal.</jobString>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>100</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PlasteelFibres</li>
+					</thingDefs>
+				</filter>
+				<count>2500</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PlasteelFibres</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Plasteel>10</Plasteel>
+		</products>
+	    <recipeUsers>
+            <li>ElectricSmelter</li>
+			<li>ATR_ProductRefinementTable</li>
+        </recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>ATR_Make_10_P_FibresIntoPlasteel</defName>
+		<label>Smelt bulk (x10) metal fibres into plasteel</label>
+		<description>Use heat and strong electromagnets to smelt metal fibres into solid blocks.</description>
+		<jobString>Smelting metal.</jobString>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>200</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PlasteelFibres</li>
+					</thingDefs>
+				</filter>
+				<count>5000</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PlasteelFibres</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Plasteel>20</Plasteel>
+		</products>
+	    <recipeUsers>
+            <li>ElectricSmelter</li>
+        </recipeUsers>
+	</RecipeDef>
 
+<!-- Make Plasteel Matt into Other Things -->
+	<!-- Make Plasteel from Matt -->
+	<RecipeDef>
+		<defName>ATR_Make_P_MattIntoPlasteel</defName>
+		<label>Smelt plasteel matt into plasteel</label>
+		<description>Use heat and strong electromagnets to smelt plasteel matt into solid blocks. Plasteel matt has additional volatiles that vaporise into gaseous steel compounds when smelted, so a small amount of plasteel is lost.</description>
+		<jobString>Smelting metal.</jobString>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>20</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PlasteelMatt</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PlasteelMatt</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Plasteel>3</Plasteel>
+		</products>
+	    <recipeUsers>
+            <li>ElectricSmelter</li>
+			<li>ATR_ProductRefinementTable</li>
+        </recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>ATR_Make_5_P_MattIntoPlasteel</defName>
+		<label>Smelt bulk (x5) plasteel matt into plasteel</label>
+		<description>Use heat and strong electromagnets to smelt plasteel matt into solid blocks. Plasteel matt has additional volatiles that vaporise into gaseous steel compounds when smelted, so a small amount of plasteel is lost.</description>
+		<jobString>Smelting metal.</jobString>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>100</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PlasteelMatt</li>
+					</thingDefs>
+				</filter>
+				<count>250</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PlasteelMatt</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Plasteel>15</Plasteel>
+		</products>
+	    <recipeUsers>
+            <li>ElectricSmelter</li>
+        </recipeUsers>
+	</RecipeDef>
+
+<!-- Make Plasteel into Plasteel Things -->
+	<!-- Make Fibres from Plasteel -->
+	<RecipeDef>
+		<defName>ATR_Make_PlasteelInto_P_Fibres</defName>
+		<label>Strip plasteel into fibres</label>
+		<description>Use a series of geared rollers and a lathe to breakdown plasteel into thin fibres. Some steel is unavoidably wasted in this process.</description>
+		<jobString>Stripping plasteel.</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>2400</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ATR_PlasteelFibres>1000</ATR_PlasteelFibres>
+		</products>
+		<skillRequirements>
+		  <Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+	    <recipeUsers>
+            <li>ElectricSmelter</li>
+			<li>ATR_ProductRefinementTable</li>
+        </recipeUsers>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>ATR_Make_2_PlasteelInto_P_Fibres</defName>
+		<label>Strip bulk (x2) plasteel into fibres</label>
+		<description>Use a series of geared rollers and a lathe to breakdown plasteel into thin fibres. Some steel is unavoidably wasted in this process.</description>
+		<jobString>Stripping plasteel.</jobString>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>4800</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ATR_PlasteelFibres>2000</ATR_PlasteelFibres>
+		</products>
+		<skillRequirements>
+		  <Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+	    <recipeUsers>
+            <li>ElectricSmelter</li>
+			<li>ATR_ProductRefinementTable</li>
+        </recipeUsers>
+	</RecipeDef>
 </Defs>
