@@ -62,7 +62,7 @@
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
-		<researchPrerequisites><li>ATR_MechanicalStandardization</li></researchPrerequisites>
+		<researchPrerequisites><li>ATR_AutonomousIndustrialization</li></researchPrerequisites>
 		<designationHotKey>Misc7</designationHotKey>
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>

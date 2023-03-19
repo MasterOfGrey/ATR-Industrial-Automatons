@@ -205,6 +205,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>ATR_SteelFibres</li>
+				<li>ATR_ChemCapsule</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -249,6 +250,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>ATR_SteelFibres</li>
+				<li>ATR_ChemCapsule</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -511,6 +513,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>ATR_PlasteelFibres</li>
+				<li>ATR_ChemCapsule</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -555,6 +558,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>ATR_PlasteelFibres</li>
+				<li>ATR_ChemCapsule</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
