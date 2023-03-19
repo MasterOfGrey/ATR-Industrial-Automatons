@@ -54,12 +54,75 @@
 			</statOffsets>
 			<statFactors>
 				<WorkToMake>2</WorkToMake>
-				<Flammability>0.02</Flammability>
+				<Flammability>0.2</Flammability>
 				<MaxHitPoints>1.6</MaxHitPoints>
 			</statFactors>
 		</stuffProps>
 		<thingCategories>
 			<li>Textiles</li>
+			<li>ATR_MechanicalProducts</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>ATR_PlasteelFibres</defName>
+		<label>Plasteel fibres</label>
+		<description>Plasteel fibres, either produced by advanced phytomining or stripped from plasteel. Their creation process makes them weakly magnetic which binds them into bunches just large enough to be handled... delicately. Can be smelted into plasteel or processed into other products.</description>
+		<graphicData>
+			<texPath>Things/PlasteelFibres</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <MarketValue>0.1</MarketValue>
+		  <Mass>0.002</Mass>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>4</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ATR_MechanicalProducts</li>
+		</thingCategories>
+		<stackLimit>20000</stackLimit>
+	</ThingDef>
+
+	<ThingDef ParentName="LeatherBase">
+		<defName>ATR_PlasteelMatt</defName>
+		<label>Plasteel matt</label>
+		<description>Faux textile formed from steel fibres spun to create a metallic yarn. Can be used as a fabric to make clothing at the expense of weight and lack of insulation.\n\n Not recommended for human colonists as the scratchy texture is sure to infuriate anyone without masochistic tendencies. Androids will not be affected.</description>
+		<graphicData>
+			<texPath>Things/PlasteelMatt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>180</MaxHitPoints>
+			<MarketValue>2.15</MarketValue>
+			<Mass>0.032</Mass>
+			<Flammability>0.1</Flammability>
+			<DeteriorationRate>1</DeteriorationRate>
+			<StuffPower_Armor_Sharp>1.98</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>0.86</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.2</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>18</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>12</StuffPower_Insulation_Heat>
+		</statBases>
+		<stuffProps>
+			<categories>
+				<li>Leathery</li>
+			</categories>
+			<commonality>0.01</commonality>
+			<color>(82,82,82)</color>
+			<statOffsets>
+				<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+				<ArmorRating_Heat>-0.1</ArmorRating_Heat>
+			</statOffsets>
+			<statFactors>
+				<WorkToMake>2</WorkToMake>
+				<Flammability>0.02</Flammability>
+				<MaxHitPoints>2</MaxHitPoints>
+				<Beauty>5</Beauty>
+			</statFactors>
+		</stuffProps>
+		<thingCategories>
 			<li>ATR_MechanicalProducts</li>
 		</thingCategories>
 	</ThingDef>
