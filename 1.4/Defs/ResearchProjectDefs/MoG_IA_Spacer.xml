@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>ATR_SpacerSynthesisTechniques</defName>
+		<label>Spacer synthesis techniques</label>
+		<tab>ATR_MechResearch</tab>
+		<description>Many materials used by spacer societies are difficult to reverse engineer due to transformative synthesis processes. This research will allow us to gain insight into the production of spacer materials which use ingredients that are altered molecularly during the production process; such as the complete fusion of plasteel fibres into the chemically polymerized strands that make synthread.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+            <li>ATR_AutonomousIndustrialization</li>
+        </prerequisites>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>0.85</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Make Vanilla Things from Mechanical Products -->
+	<!-- Make Synthread -->
+
+	<RecipeDef>
+		<defName>ATR_MakeSynthreadCloth</defName>
+		<label>Weave synthread cloth (10)</label>
+		<description>Weave synthread cloth from polysynthoprene thread.\n\nMakes 10 cloth.</description>
+		<jobString>Weaving synthread cloth.</jobString>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<workAmount>600</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PolysynthopreneThread</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PolysynthopreneThread</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Synthread>10</Synthread>
+		</products>
+		<recipeUsers>
+			<li>ATR_ProductRefinementTable</li>
+        </recipeUsers>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>ATR_MakeSynthreadClothBulk</defName>
+		<label>Weave synthread cloth (40)</label>
+		<description>Weave synthread cloth from polysynthoprene thread.\n\nMakes 40 cloth.</description>
+		<jobString>Weaving synthread cloth.</jobString>
+		<effectWorking>Tailor</effectWorking>
+		<soundWorking>Recipe_Tailor</soundWorking>
+		<workAmount>2400</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ATR_PolysynthopreneThread</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ATR_PolysynthopreneThread</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Synthread>40</Synthread>
+		</products>
+		<recipeUsers>
+			<li>ATR_ProductRefinementTable</li>
+        </recipeUsers>
+	</RecipeDef>	
+
+</Defs>

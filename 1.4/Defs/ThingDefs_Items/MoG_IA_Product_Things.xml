@@ -127,4 +127,25 @@
 		</thingCategories>
 	</ThingDef>
 
+	<ThingDef ParentName="ResourceBase">
+		<defName>ATR_PolysynthopreneThread</defName>
+		<label>Polysynthoprene thread</label>
+		<description>The basic material of synthread fabric and the base element of other higher tier textiles. On worlds with proper facilities the chemical stew from which the thread is polymerized is drawn on by large automated machines that constantly draw thousands of threads at a time and weave them directly into synthread. These machines make an otherwise laborious process trivial, hence the popularity of synthread in spacer societies.\n\nDue to the limitations of rimworld manufacturing facilities it is necessary to manually synthesise the thread onto spools before then weaving it into whole cloth.</description>
+		<graphicData>
+			<texPath>Things/PolysynthopreneThread</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<MarketValue>2.4</MarketValue>
+			<Mass>0.025</Mass>
+			<Flammability>0.7</Flammability>
+			<DeteriorationRate>3</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ATR_MechanicalProducts</li>
+		</thingCategories>
+		<techLevel>Spacer</techLevel>
+	</ThingDef>
+
 </Defs>
