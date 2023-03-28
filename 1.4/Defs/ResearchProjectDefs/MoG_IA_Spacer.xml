@@ -13,6 +13,9 @@
         </prerequisites>
 		<researchViewX>6.00</researchViewX>
 		<researchViewY>0.85</researchViewY>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
 	</ResearchProjectDef>
 
 </Defs>

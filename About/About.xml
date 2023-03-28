@@ -24,4 +24,7 @@
 		<li>Ludeon.RimWorld.Ideology</li><!-- Just making extra sure... -->
 		<li>Ludeon.RimWorld.Biotech</li><!-- Just making extra sure... -->
     </loadAfter>
+	<loadBefore>
+		<li>Android Tiers Reforged - Return MUFF</li><!-- Designed load order. -->
+	</loadBefore>
 </ModMetaData>
