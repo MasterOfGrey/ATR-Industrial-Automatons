@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Edit VGP Garden Fabrics Recipes for Synergy with Industrial Automatons-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VGP Garden Fabrics</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+			<!-- Research Project Changes (Just the Tech Tree itself.) -->
+				<!-- VG_ClothII -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothII"]/prerequisites</xpath>
+					<value><prerequisites><li>ATR_SpacerSynthesisTechniques</li><li>ComplexClothing</li></prerequisites></value></li>
+				
+				<!-- VG_ClothI (This is superfluous with ATR_SpacerSynthesisTechniques) -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothI"]</xpath></li>
+				
+			<!-- Patch Out Recipes/Nodes that Duplicate Features to be Ready for Integration Patches -->
+				<!-- ATR_IA introduces it's own synthread production recipes using slightly more sensible materials for what synthread is. -->
+				<!-- MakeSynthreadCloth -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[defName = "MakeSynthreadCloth"]</xpath></li>
+				<!-- MakeSynthreadClothBulk -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[defName = "MakeSynthreadClothBulk"]</xpath></li>
+				
+				<!-- ATR_IA has a nonsensical bench for actually making synthread *fabric*. We'll move that to the loom. -->
+				<!-- ATR_MakeSynthreadCloth -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeSynthreadCloth"]/recipeUsers</xpath></li>
+				<!-- ATR_MakeSynthreadClothBulk -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeSynthreadClothBulk"]/recipeUsers</xpath></li>
+				
+			<!-- Recipe Integrations -->
+				<!-- TableLoom:MakeSynthreadCloth -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName = "TableLoom"]/recipes/li[text() = "MakeSynthreadCloth"]</xpath>
+					<value><li>ATR_MakeSynthreadCloth</li></value></li>
+				<!-- TableLoom:MakeSynthreadClothBulk -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName = "TableLoom"]/recipes/li[text() = "MakeSynthreadClothBulk"]</xpath>
+					<value><li>ATR_MakeSynthreadClothBulk</li></value></li>
+				
+				<!-- TableElecLoom:MakeSynthreadCloth -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName = "TableElecLoom"]/recipes/li[text() = "MakeSynthreadCloth"]</xpath>
+					<value><li>ATR_MakeSynthreadCloth</li></value></li>
+				<!-- TableElecLoom:MakeSynthreadClothBulk -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName = "TableElecLoom"]/recipes/li[text() = "MakeSynthreadClothBulk"]</xpath>
+					<value><li>ATR_MakeSynthreadClothBulk</li></value></li>
+				
+				<!-- MakePlasteelThread (Replaced for simplicity.) -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakePlasteelThread"]</xpath>
+					<value><RecipeDef>
+						<defName>MakePlasteelThread</defName>
+						<label>Craft plasteel threads (25)</label>
+						<description>Spin plasteel thread from plasteel fibres. Used in advanced cloth weaving. \n\n Makes 25 Threads.</description>
+						<jobString>Spinning plasteel thread.</jobString>
+						<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+						<effectWorking>Tailor</effectWorking>
+						<soundWorking>Recipe_Tailor</soundWorking>
+						<workAmount>1200</workAmount>
+						<ingredients>
+							<li>
+								<filter>
+									<thingDefs>
+										<li>ATR_PlasteelFibres</li>
+									</thingDefs>
+								</filter>
+								<count>1000</count>
+							</li>
+						</ingredients>
+						<fixedIngredientFilter>
+							<thingDefs>
+								<li>ATR_PlasteelFibres</li>
+							</thingDefs>
+						</fixedIngredientFilter>
+						<products>
+							<VG_PlasteelThread>25</VG_PlasteelThread>
+						</products>
+						<workSkill>Crafting</workSkill>
+						<recipeUsers>
+							<li>ATR_ProductRefinementTable</li>
+						</recipeUsers>
+					</RecipeDef></value></li>
+				
+				<!-- MakeHyperweaveCloth -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]/label</xpath>
+					<value><label>Weave hyperweave cloth (15)</label></value></li>
+				<!-- MakeHyperweaveCloth -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]/jobString</xpath>
+					<value><jobString>Weaving hyperweave cloth.</jobString></value></li>
+				<!-- MakeHyperweaveCloth -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]/description</xpath>
+					<value><description>Weave hyperweave cloth from mixing smokeleaf fibres, raw devilstrand, polysynthoprene thread, and plasteel thread. \n\nMakes 15 cloth.</description></value></li>
+				<!-- MakeHyperweaveCloth -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]/ingredients</xpath>
+					<value><ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ATR_PolysynthopreneThread</li>
+								</thingDefs>
+							</filter>
+							<count>10</count>
+						</li>
+						<li>
+							<filter>
+							  <thingDefs>
+								<li>SmokeleafLeaves</li>
+							  </thingDefs>
+							</filter>
+							<count>5</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>RawDevilstrand</li>
+								</thingDefs>
+							</filter>
+							<count>12</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>VG_PlasteelThread</li>
+								</thingDefs>
+							</filter>
+							<count>5</count>
+						</li>
+					</ingredients></value></li>
+				<!-- MakeHyperweaveCloth -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]/fixedIngredientFilter</xpath>
+					<value><fixedIngredientFilter>
+						<thingDefs>
+							<li>ATR_PolysynthopreneThread</li>
+							<li>SmokeleafLeaves</li>
+							<li>RawDevilstrand</li>
+							<li>VG_PlasteelThread</li>
+						</thingDefs>
+					</fixedIngredientFilter></value></li>
+				
+				<!-- MakeHyperweaveClothBulk -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]/label</xpath>
+					<value><label>Weave hyperweave cloth (60)</label></value></li>
+				<!-- MakeHyperweaveClothBulk -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]/jobString</xpath>
+					<value><jobString>Weaving bulk hyperweave cloth.</jobString></value></li>
+				<!-- MakeHyperweaveClothBulk -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]/description</xpath>
+					<value><description>Weave hyperweave cloth from mixing smokeleaf fibres, raw devilstrand, polysynthoprene thread, and plasteel thread. \n\nMakes 60 cloth.</description></value></li>
+				<!-- MakeHyperweaveClothBulk -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]/ingredients</xpath>
+					<value><ingredients>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>ATR_PolysynthopreneThread</li>
+								</thingDefs>
+							</filter>
+							<count>40</count>
+						</li>
+						<li>
+							<filter>
+							  <thingDefs>
+								<li>SmokeleafLeaves</li>
+							  </thingDefs>
+							</filter>
+							<count>20</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>RawDevilstrand</li>
+								</thingDefs>
+							</filter>
+							<count>48</count>
+						</li>
+						<li>
+							<filter>
+								<thingDefs>
+									<li>VG_PlasteelThread</li>
+								</thingDefs>
+							</filter>
+							<count>20</count>
+						</li>
+					</ingredients></value></li>
+				<!-- MakeHyperweaveClothBulk -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]/fixedIngredientFilter</xpath>
+					<value><fixedIngredientFilter>
+						<thingDefs>
+							<li>ATR_PolysynthopreneThread</li>
+							<li>SmokeleafLeaves</li>
+							<li>RawDevilstrand</li>
+							<li>VG_PlasteelThread</li>
+						</thingDefs>
+					</fixedIngredientFilter></value></li>
+				
+			<!-- Patch Categories -->
+				<!-- VG_PlasteelThread -->
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName = "VG_PlasteelThread"]/thingCategories</xpath>
+					<value><li>ATR_MechanicalProducts</li></value></li>
+			
+			</operations>
+		</match>
+	</Operation>
+    
+</Patch>

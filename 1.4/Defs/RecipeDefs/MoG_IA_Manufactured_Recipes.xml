@@ -41,7 +41,7 @@
 		<defName>ATR_MakeSynthreadClothBulk</defName>
 		<label>Weave synthread cloth (40)</label>
 		<description>Weave synthread cloth from polysynthoprene thread.\n\nMakes 40 cloth.</description>
-		<jobString>Weaving synthread cloth.</jobString>
+		<jobString>Weaving bulk synthread cloth.</jobString>
 		<effectWorking>Tailor</effectWorking>
 		<soundWorking>Recipe_Tailor</soundWorking>
 		<workAmount>2400</workAmount>

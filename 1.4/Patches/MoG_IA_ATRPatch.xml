@@ -234,6 +234,10 @@
 				
 			<!-- Patch Recipes -->
 				<!-- ATR_Make_NutritionBlockFromSolutionAndCapsules -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/RecipeDef[defName = "ATR_Make_NutritionBlockFromSolutionAndCapsules"]/label</xpath>
+					<value><label>Stabilize nutrient solution into nutrition blocks (7)</label></value></li>
+				<!-- ATR_Make_NutritionBlockFromSolutionAndCapsules -->
 				<li Class="PatchOperationAdd">
 					<xpath>Defs/RecipeDef[defName = "ATR_Make_NutritionBlockFromSolutionAndCapsules"]/recipeUsers</xpath>
 					<value><li>ATR_ProductRefinementTable</li></value></li>
