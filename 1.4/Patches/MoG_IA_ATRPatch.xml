@@ -210,13 +210,13 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "ATR_SkyMindCore"]/researchViewY</xpath>
 					<value><researchViewY>4.45</researchViewY></value></li>
-				<!-- ATR_ArchotechInsight -->
+				<!-- ATR_ArchotechInsight
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "ATR_ArchotechInsight"]/researchViewX</xpath>
 					<value><researchViewX>9.00</researchViewX></value></li>
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "ATR_ArchotechInsight"]/researchViewY</xpath>
-					<value><researchViewY>5.10</researchViewY></value></li>
+					<value><researchViewY>5.10</researchViewY></value></li> -->
 				
 			<!-- Unlock Changes (Derivatives of Tech Tree changes.) -->
 				<!-- ATR_HydraulicFrame -->
