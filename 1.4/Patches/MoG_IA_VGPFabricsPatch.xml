@@ -13,10 +13,23 @@
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothII"]/prerequisites</xpath>
 					<value><prerequisites><li>ATR_SpacerSynthesisTechniques</li><li>ComplexClothing</li></prerequisites></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothII"]/tab</xpath>
+					<value><tab>ATR_MechResearch</tab></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothII"]/researchViewX</xpath>
+					<value><researchViewX>7.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothII"]/researchViewY</xpath>
+					<value><researchViewY>1.20</researchViewY></value></li>
 				
 				<!-- VG_ClothI (This is superfluous with ATR_SpacerSynthesisTechniques) -->
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothI"]</xpath></li>
+					
+				<!-- VG ResearcchTabDef (This is moved for simplicity.) -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/ResearchTabDef[defName = "VG"]</xpath></li>
 				
 			<!-- Patch Out Recipes/Nodes that Duplicate Features to be Ready for Integration Patches -->
 				<!-- ATR_IA introduces it's own synthread production recipes using slightly more sensible materials for what synthread is. -->
