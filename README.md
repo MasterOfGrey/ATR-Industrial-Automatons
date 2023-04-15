@@ -18,6 +18,10 @@ This mod reworks and expands upon features designed to be used with T1 and other
 * Continuous Tread Leg
   - Zippy speeds! Only for droids who do field work and never need to go near combat...
   - Recommended for T1's
+* Mechanical Production Chains
+  - Product Refinement Table for handling recipes
+  - Return of steel and introduction of plasteel textiles
+  - Synthread production
 
 Future Fun:
 * Recharge Throne
@@ -36,6 +40,7 @@ I am happy to incorporate other ideas if people have them.
 
 ## Recommended:
 * Works best with ATR Frames Reforged!
+* Built-in synergistic integration with VGP Garden Fabrics
 
 ## Compatibility:
 * Requires Android Tiers Reforged
