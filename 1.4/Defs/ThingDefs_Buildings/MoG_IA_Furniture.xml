@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+	<!-- Mech Product Refinement Table -->
 	<ThingDef ParentName="BenchBase">
 		<defName>ATR_ProductRefinementTable</defName>
 		<label>Mech product refinement table</label>

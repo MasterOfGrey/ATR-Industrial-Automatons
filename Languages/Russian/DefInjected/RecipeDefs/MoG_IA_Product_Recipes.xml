@@ -11,11 +11,11 @@
   <ATR_Make_S_FibresIntoYarn.jobString>Прядёт стальную пряжу.</ATR_Make_S_FibresIntoYarn.jobString>
 
   <!--Spin bulk (x4) steel fibres into steel yarn-->
-  <ATR_Make_5_S_FibresIntoYarn.label>Прясть стальные волокна в стальную пряжу х4</ATR_Make_5_S_FibresIntoYarn.label>
+  <ATR_Make_4_S_FibresIntoYarn.label>Прясть стальные волокна в стальную пряжу х4</ATR_Make_5_S_FibresIntoYarn.label>
   <!--Use special spinning tools to spin steel fibres into a wool-like yarn.-->
-  <ATR_Make_5_S_FibresIntoYarn.description>Используйте специальные прядильные инструменты для скручивания стальных волокон в пряжу, похожую на шерсть.</ATR_Make_5_S_FibresIntoYarn.description>
+  <ATR_Make_4_S_FibresIntoYarn.description>Используйте специальные прядильные инструменты для скручивания стальных волокон в пряжу, похожую на шерсть.</ATR_Make_5_S_FibresIntoYarn.description>
   <!--Spinning steel yarn.-->
-  <ATR_Make_5_S_FibresIntoYarn.jobString>Прядёт стальную пряжу.</ATR_Make_5_S_FibresIntoYarn.jobString>
+  <ATR_Make_4_S_FibresIntoYarn.jobString>Прядёт стальную пряжу.</ATR_Make_5_S_FibresIntoYarn.jobString>
 
 
   <!-- Make Steel -->
