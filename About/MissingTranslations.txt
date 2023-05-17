@@ -15,6 +15,7 @@ DefInjected
 			- <ATR_ContinuousTreadLeg.description>
 				Needed: /English/, German, Spanish, SpanishLatin
 	JobDefs
+		sd_luciprod_JobDefs
 			- <sd_luciprod_filldistillery.reportString>
 				Needed: Russian
 			- <sd_luciprod_takelucioutofdistillery.reportString>
@@ -277,7 +278,6 @@ DefInjected
 				Needed: /English/, German, Russian, Spanish, SpanishLatin
 			- <ATR_SpacerSynthesisTechniques.description>
 				Needed: /English/, German, Russian, Spanish, SpanishLatin
-		
 		sd_luciprod_ResearchProjectDefs
 			- <sd_luciprod_research_luciprod.label>
 				Needed: Russian
@@ -377,20 +377,20 @@ DefInjected
 Keyed
 	sd_luciprod_Keyed
 		- <sd_luciprod_txtcontainsrawluci>
-				Needed: Russian
-			- <sd_luciprod_txtcontainsoil>
-				Needed: Russian
-			- <sd_luciprod_txtdistilled>
-				Needed: Russian
-			- <sd_luciprod_txtdistillingprogress>
-				Needed: Russian
-			- <sd_luciprod_txtdistilleryoutofidealtemperature>
-				Needed: Russian
-			- <sd_luciprod_txttemperature>
-				Needed: Russian
-			- <sd_luciprod_txtidealdistillingtemperature>
-				Needed: Russian
-			- <sd_luciprod_txtbadtemperature>
-				Needed: Russian
-			- <sd_luciprod_txtnomechaniteoil>
-				Needed: Russian
+			Needed: Russian
+		- <sd_luciprod_txtcontainsoil>
+			Needed: Russian
+		- <sd_luciprod_txtdistilled>
+			Needed: Russian
+		- <sd_luciprod_txtdistillingprogress>
+			Needed: Russian
+		- <sd_luciprod_txtdistilleryoutofidealtemperature>
+			Needed: Russian
+		- <sd_luciprod_txttemperature>
+			Needed: Russian
+		- <sd_luciprod_txtidealdistillingtemperature>
+			Needed: Russian
+		- <sd_luciprod_txtbadtemperature>
+			Needed: Russian
+		- <sd_luciprod_txtnomechaniteoil>
+			Needed: Russian
