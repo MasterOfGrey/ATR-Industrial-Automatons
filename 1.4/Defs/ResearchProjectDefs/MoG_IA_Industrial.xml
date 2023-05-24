@@ -13,7 +13,7 @@
 			<li>ATR_T1Androids</li>
         </prerequisites>
 		<researchViewX>2.00</researchViewX>
-		<researchViewY>0.85</researchViewY>
+		<researchViewY>0.80</researchViewY>
 	</ResearchProjectDef>
 
     <ResearchProjectDef>
@@ -27,8 +27,8 @@
 			<li>ATR_MechanicalFrameworks</li>
 			<li>ATR_AutonomousIndustrialization</li>
 		</prerequisites>
-		<researchViewX>4.00</researchViewX>
-		<researchViewY>1.55</researchViewY>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>1.80</researchViewY>
     </ResearchProjectDef>
 
     <ResearchProjectDef>

@@ -4,13 +4,12 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace ATR_Industrial_Automatons
+namespace ATR_Industrial_Automatons;
 // .sd_luciprod
-{
-    //[StaticConstructorOnStartup]
+[StaticConstructorOnStartup]
     public class Building_sd_luciprod_distillery : Building
 	{
-		private const int MaxCapacity = 10;
+		private const int MaxCapacity = 4;
 
 		private const int BaseFermentationDuration = 600000;
 
@@ -91,7 +90,7 @@ namespace ATR_Industrial_Automatons
 				}
 				else
 				{
-					result = checked(10 - sd_luciprod_oilcount);
+					result = checked(4 - sd_luciprod_oilcount);
 				}
 
 				return result;
@@ -158,7 +157,7 @@ namespace ATR_Industrial_Automatons
 				}
 				else
 				{
-					var num = Mathf.Min(count, 10 - sd_luciprod_oilcount);
+					var num = Mathf.Min(count, 4 - sd_luciprod_oilcount);
 					if (num <= 0)
 					{
 						return;
@@ -212,12 +211,12 @@ namespace ATR_Industrial_Automatons
 				if (Distilled)
 				{
 					stringBuilder.AppendLine(string.Concat("sd_luciprod_txtcontainsrawluci".Translate(), ": ",
-						sd_luciprod_oilcount, "/10"));
+						sd_luciprod_oilcount, "/4"));
 				}
 				else
 				{
 					stringBuilder.AppendLine(string.Concat("sd_luciprod_txtcontainsoil".Translate(), ": ",
-						sd_luciprod_oilcount, "/10"));
+						sd_luciprod_oilcount, "/4"));
 				}
 			}
 
@@ -261,7 +260,7 @@ namespace ATR_Industrial_Automatons
 			else
 			{
 				var thing = ThingMaker.MakeThing(ThingDefOf.sd_luciprod_rawlucibatch);
-				thing.stackCount = sd_luciprod_oilcount / 2;
+				thing.stackCount = sd_luciprod_oilcount + 1;
 				Reset();
 				result = thing;
 			}
@@ -284,7 +283,7 @@ namespace ATR_Industrial_Automatons
 			{
 				center = drawPos,
 				size = BarSize,
-				fillPercent = sd_luciprod_oilcount / 10f,
+				fillPercent = sd_luciprod_oilcount / 4f,
 				filledMat = BarFilledMat,
 				unfilledMat = BarUnfilledMat,
 				margin = 0.1f,
@@ -310,5 +309,4 @@ namespace ATR_Industrial_Automatons
 			};
 			yield return command_Action;
 		}
-	}
 }

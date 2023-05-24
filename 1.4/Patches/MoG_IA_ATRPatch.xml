@@ -173,7 +173,7 @@
 				<!-- ATR_T4Androids -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "ATR_T4Androids"]/researchViewX</xpath>
-					<value><researchViewX>9.00</researchViewX></value></li>
+					<value><researchViewX>10.00</researchViewX></value></li>
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "ATR_T4Androids"]/researchViewY</xpath>
 					<value><researchViewY>3.70</researchViewY></value></li>
@@ -199,17 +199,31 @@
 				<!-- ATR_ServerOptimization -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "ATR_ServerOptimization"]/researchViewX</xpath>
-					<value><researchViewX>8.00</researchViewX></value></li>
+					<value><researchViewX>10.00</researchViewX></value></li>
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "ATR_ServerOptimization"]/researchViewY</xpath>
 					<value><researchViewY>4.45</researchViewY></value></li>
 				<!-- ATR_SkyMindCore -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "ATR_SkyMindCore"]/researchViewX</xpath>
-					<value><researchViewX>9.00</researchViewX></value></li>
+					<value><researchViewX>11.00</researchViewX></value></li>
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "ATR_SkyMindCore"]/researchViewY</xpath>
 					<value><researchViewY>4.45</researchViewY></value></li>
+				<!-- ATR_SurrogateOptimization -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_SurrogateOptimization"]/researchViewX</xpath>
+					<value><researchViewX>10.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_SurrogateOptimization"]/researchViewY</xpath>
+					<value><researchViewY>5.00</researchViewY></value></li>
+				<!-- ATR_PersonaManufacturing -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_PersonaManufacturing"]/researchViewX</xpath>
+					<value><researchViewX>11.00</researchViewX></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "ATR_PersonaManufacturing"]/researchViewY</xpath>
+					<value><researchViewY>5.00</researchViewY></value></li>
 				<!-- ATR_ArchotechInsight
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "ATR_ArchotechInsight"]/researchViewX</xpath>

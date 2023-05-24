@@ -9,7 +9,7 @@
 		<gerund>taking luciferium from</gerund>
 		<priorityInType>130</priorityInType>
 		<requiredCapacities>
-		<li>Manipulation</li>
+			<li>Manipulation</li>
 		</requiredCapacities>
 	</WorkGiverDef>
 	<WorkGiverDef>
@@ -21,7 +21,7 @@
 		<gerund>filling</gerund>
 		<priorityInType>120</priorityInType>
 		<requiredCapacities>
-		<li>Manipulation</li>
+			<li>Manipulation</li>
 		</requiredCapacities>
 	</WorkGiverDef>
 	<WorkGiverDef>
@@ -31,12 +31,12 @@
 		<workType>Crafting</workType>
 		<priorityInType>85</priorityInType>
 		<fixedBillGiverDefs>
-		<li>sd_luciprod_mechstasispod</li>
+			<li>sd_luciprod_mechstasispod</li>
 		</fixedBillGiverDefs>
 		<verb>extract mechanite oil</verb>
 		<gerund>extract mechanite oil at</gerund>
 		<requiredCapacities>
-		<li>Manipulation</li>
+			<li>Manipulation</li>
 		</requiredCapacities>
 		<prioritizeSustains>true</prioritizeSustains>
 	</WorkGiverDef>
@@ -51,7 +51,7 @@
 		<verb>modify</verb>
 		<gerund>modifying</gerund>
 		<requiredCapacities>
-		<li>Manipulation</li>
+			<li>Manipulation</li>
 		</requiredCapacities>
 		<prioritizeSustains>true</prioritizeSustains>
 	</WorkGiverDef>

@@ -11,6 +11,12 @@
 			<!-- Research Project Changes (Just the Tech Tree itself.) -->
 				<!-- VG_ClothII -->
 				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothII"]/label</xpath>
+					<value><label>Hyperweave pattern</label></value></li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothII"]/description</xpath>
+					<value><description>Research a technique for weaving a fabric pattern that contains all the critical building block elements for Hyperweave.\n\nUnlocks the recipe for unfinished hyperweave at the loom. Finishing requires the use of cerulean mechanites which are researched separately.</description></value></li>
+				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothII"]/prerequisites</xpath>
 					<value><prerequisites><li>ATR_SpacerSynthesisTechniques</li><li>ComplexClothing</li></prerequisites></value></li>
 				<li Class="PatchOperationReplace">
@@ -21,7 +27,7 @@
 					<value><researchViewX>7.00</researchViewX></value></li>
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ResearchProjectDef[defName = "VG_ClothII"]/researchViewY</xpath>
-					<value><researchViewY>1.20</researchViewY></value></li>
+					<value><researchViewY>0.50</researchViewY></value></li>
 				
 				<!-- VG_ClothI (This is superfluous with ATR_SpacerSynthesisTechniques) -->
 				<li Class="PatchOperationRemove">
@@ -48,7 +54,23 @@
 				<li Class="PatchOperationRemove">
 					<xpath>Defs/RecipeDef[defName = "ATR_MakeSynthreadClothBulk"]/recipeUsers</xpath></li>
 				
-			<!-- Recipe Integrations -->
+				<!-- ATR_IA introduces it's own hyperweave production recipes to incorporate the mechanite production described in the item lore. -->
+				<!-- MakeHyperweaveCloth -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]</xpath></li>
+				<!-- MakeHyperweaveClothBulk -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]</xpath></li>
+				
+				<!-- ATR_IA has a nonsensical bench for actually making unfinished hyperweave *fabric*. We'll move that to the loom too. -->
+				<!-- ATR_MakeUnfinishedHyperweaveCloth -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveCloth"]/recipeUsers</xpath></li>
+				<!-- ATR_MakeUnfinishedHyperweaveClothBulk -->
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveClothBulk"]/recipeUsers</xpath></li>
+				
+			<!-- Workbench Recipe Conversions -->
 				<!-- TableLoom:MakeSynthreadCloth -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/ThingDef[defName = "TableLoom"]/recipes/li[text() = "MakeSynthreadCloth"]</xpath>
@@ -67,6 +89,25 @@
 					<xpath>Defs/ThingDef[defName = "TableElecLoom"]/recipes/li[text() = "MakeSynthreadClothBulk"]</xpath>
 					<value><li>ATR_MakeSynthreadClothBulk</li></value></li>
 				
+				<!-- TableLoom:MakeHyperweaveCloth -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName = "TableLoom"]/recipes/li[text() = "MakeHyperweaveCloth"]</xpath>
+					<value><li>ATR_MakeUnfinishedHyperweaveCloth</li></value></li>
+				<!-- TableLoom:MakeHyperweaveClothBulk -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName = "TableLoom"]/recipes/li[text() = "MakeHyperweaveClothBulk"]</xpath>
+					<value><li>ATR_MakeUnfinishedHyperweaveClothBulk</li></value></li>
+				
+				<!-- TableElecLoom:MakeHyperweaveCloth -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName = "TableElecLoom"]/recipes/li[text() = "MakeHyperweaveCloth"]</xpath>
+					<value><li>ATR_MakeUnfinishedHyperweaveCloth</li></value></li>
+				<!-- TableElecLoom:MakeHyperweaveClothBulk -->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName = "TableElecLoom"]/recipes/li[text() = "MakeHyperweaveClothBulk"]</xpath>
+					<value><li>ATR_MakeUnfinishedHyperweaveClothBulk</li></value></li>
+
+			<!-- Recipe Integrations -->
 				<!-- MakePlasteelThread (Replaced for simplicity.) -->
 				<li Class="PatchOperationReplace">
 					<xpath>Defs/RecipeDef[defName = "MakePlasteelThread"]</xpath>
@@ -102,22 +143,23 @@
 							<li>ATR_ProductRefinementTable</li>
 						</recipeUsers>
 					</RecipeDef></value></li>
-				
-				<!-- MakeHyperweaveCloth -->
+
+				<!-- Insert VGP Ingredients and Req's into Recipe for making Unfinished Hyperweave -->
+				<!-- ATR_MakeUnfinishedHyperweaveCloth -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]/label</xpath>
-					<value><label>Weave hyperweave cloth (15)</label></value></li>
-				<!-- MakeHyperweaveCloth -->
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveCloth"]/workAmount</xpath>
+					<value><workAmount>2400</workAmount></value></li>
+				<!-- ATR_MakeUnfinishedHyperweaveCloth -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]/jobString</xpath>
-					<value><jobString>Weaving hyperweave cloth.</jobString></value></li>
-				<!-- MakeHyperweaveCloth -->
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveCloth"]/researchPrerequisite</xpath>
+					<value><researchPrerequisite>VG_ClothII</researchPrerequisite></value></li>
+				<!-- ATR_MakeUnfinishedHyperweaveCloth -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]/description</xpath>
-					<value><description>Weave hyperweave cloth from mixing smokeleaf fibres, raw devilstrand, polysynthoprene thread, and plasteel thread. \n\nMakes 15 cloth.</description></value></li>
-				<!-- MakeHyperweaveCloth -->
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveCloth"]/description</xpath>
+					<value><description>Weave unfinished hyperweave cloth from mixing smokeleaf fibres, raw devilstrand, polysynthoprene thread, and plasteel thread. \n\nMakes 15 cloth.</description></value></li>
+				<!-- ATR_MakeUnfinishedHyperweaveCloth -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]/ingredients</xpath>
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveCloth"]/ingredients</xpath>
 					<value><ingredients>
 						<li>
 							<filter>
@@ -152,9 +194,9 @@
 							<count>5</count>
 						</li>
 					</ingredients></value></li>
-				<!-- MakeHyperweaveCloth -->
+				<!-- ATR_MakeUnfinishedHyperweaveCloth -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveCloth"]/fixedIngredientFilter</xpath>
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveCloth"]/fixedIngredientFilter</xpath>
 					<value><fixedIngredientFilter>
 						<thingDefs>
 							<li>ATR_PolysynthopreneThread</li>
@@ -164,21 +206,21 @@
 						</thingDefs>
 					</fixedIngredientFilter></value></li>
 				
-				<!-- MakeHyperweaveClothBulk -->
+				<!-- ATR_MakeUnfinishedHyperweaveClothBulk -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]/label</xpath>
-					<value><label>Weave hyperweave cloth (60)</label></value></li>
-				<!-- MakeHyperweaveClothBulk -->
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveClothBulk"]/workAmount</xpath>
+					<value><workAmount>7600</workAmount></value></li>
+				<!-- ATR_MakeUnfinishedHyperweaveClothBulk -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]/jobString</xpath>
-					<value><jobString>Weaving bulk hyperweave cloth.</jobString></value></li>
-				<!-- MakeHyperweaveClothBulk -->
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveClothBulk"]/researchPrerequisite</xpath>
+					<value><researchPrerequisite>VG_ClothII</researchPrerequisite></value></li>
+				<!-- ATR_MakeUnfinishedHyperweaveClothBulk -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]/description</xpath>
-					<value><description>Weave hyperweave cloth from mixing smokeleaf fibres, raw devilstrand, polysynthoprene thread, and plasteel thread. \n\nMakes 60 cloth.</description></value></li>
-				<!-- MakeHyperweaveClothBulk -->
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveClothBulk"]/description</xpath>
+					<value><description>Weave unfinished hyperweave cloth from mixing smokeleaf fibres, raw devilstrand, polysynthoprene thread, and plasteel thread. \n\nMakes 60 cloth.</description></value></li>
+				<!-- ATR_MakeUnfinishedHyperweaveClothBulk -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]/ingredients</xpath>
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveClothBulk"]/ingredients</xpath>
 					<value><ingredients>
 						<li>
 							<filter>
@@ -213,9 +255,9 @@
 							<count>20</count>
 						</li>
 					</ingredients></value></li>
-				<!-- MakeHyperweaveClothBulk -->
+				<!-- ATR_MakeUnfinishedHyperweaveClothBulk -->
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/RecipeDef[defName = "MakeHyperweaveClothBulk"]/fixedIngredientFilter</xpath>
+					<xpath>Defs/RecipeDef[defName = "ATR_MakeUnfinishedHyperweaveClothBulk"]/fixedIngredientFilter</xpath>
 					<value><fixedIngredientFilter>
 						<thingDefs>
 							<li>ATR_PolysynthopreneThread</li>

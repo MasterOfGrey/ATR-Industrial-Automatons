@@ -8,6 +8,11 @@ Existing partially localised languages: German, Russian, Spanish, SpanishLatin
 The following are the individual translation localisations required to fully support this mod, with language gaps noted per Def:
 
 DefInjected
+	Drugs
+		MoG_IA_MechaniteOil
+			- <ATR_MechaniteOil.description>
+				Needed: Russian
+				Outdated: /English/, German, Spanish, SpanishLatin
 	HeaddiffDefs
 		MoG_IA_BodyParts
 			- <ATR_ContinuousTreadLeg.label>
@@ -28,6 +33,39 @@ DefInjected
 				Needed: /English/, German, Spanish, SpanishLatin
 			- <ATR_Install_ContinuousTreadLeg.jobString>
 				Needed: /English/, German, Spanish, SpanishLatin
+
+		MoG_IA_Mechanite_Recipes
+			- <ATR_ExtractMechaniteOil_Unassisted.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_ExtractMechaniteOil_Unassisted.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_ExtractMechaniteOil_Unassisted.jobString>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_ExtractMechaniteOil_Supported.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_ExtractMechaniteOil_Supported.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_ExtractMechaniteOil_Supported.jobString>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_FilterMechaniteOil.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_FilterMechaniteOil.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_FilterMechaniteOil.jobString>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_Make_ScarletMechaniteOil.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_Make_ScarletMechaniteOil.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_Make_ScarletMechaniteOil.jobString>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_Make_CeruleanMechanites.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_Make_CeruleanMechanites.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_Make_CeruleanMechanites.jobString>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+
 		MoG_IA_Manufactured_Recipes
 			- <ATR_MakeSynthreadCloth.label>
 				Needed: /English/, German, Russian, Spanish, SpanishLatin
@@ -41,6 +79,35 @@ DefInjected
 				Needed: /English/, German, Russian, Spanish, SpanishLatin
 			- <ATR_MakeSynthreadClothBulk.jobString>
 				Needed: /English/, German, Russian, Spanish, SpanishLatin
+				
+			- <ATR_MakeUnfinishedHyperweaveCloth.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MakeUnfinishedHyperweaveCloth.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+				(Expanded in VGP Patch)
+			- <ATR_MakeUnfinishedHyperweaveCloth.jobString>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MakeUnfinishedHyperweaveClothBulk.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MakeUnfinishedHyperweaveClothBulk.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+				(Expanded in VGP Patch)
+			- <ATR_MakeUnfinishedHyperweaveClothBulk.jobString>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			
+			- <ATR_MakeHyperweaveCloth.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MakeHyperweaveCloth.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MakeHyperweaveCloth.jobString>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MakeHyperweaveClothBulk.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MakeHyperweaveClothBulk.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MakeHyperweaveClothBulk.jobString>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			
 		MoG_IA_Product_Recipes
 			- <ATR_Make_S_FibresIntoYarn.label>
 				Needed: /English/, German, Spanish, SpanishLatin
@@ -235,12 +302,6 @@ DefInjected
 				- <MakeHyperweaveClothBulk.jobString>
 					Needed: /English/, German, Russian, Spanish, SpanishLatin
 		sd_luciprod_RecipeDefs
-			- <sd_luciprod_extract_oil_pod.label>
-				Needed: Russian
-			- <sd_luciprod_extract_oil_pod.description>
-				Needed: Russian
-			- <sd_luciprod_extract_oil_pod.jobString>
-				Needed: Russian
 			- <sd_luciprod_prepare_mech.label>
 				Needed: Russian
 			- <sd_luciprod_prepare_mech.description>
@@ -251,6 +312,7 @@ DefInjected
 				Needed: Russian
 			- <sd_luciprod_make_luci.description>
 				Needed: Russian
+				Outdated: Needed: /English/, German, Spanish, SpanishLatin
 			- <sd_luciprod_make_luci.jobString>
 				Needed: Russian
 			- <sd_luciprod_disassemble_prepcorpse.label>
@@ -278,11 +340,16 @@ DefInjected
 				Needed: /English/, German, Russian, Spanish, SpanishLatin
 			- <ATR_SpacerSynthesisTechniques.description>
 				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MechaniteHandling.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MechaniteHandling.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MechaniteRepurposing.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_MechaniteRepurposing.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
 		sd_luciprod_ResearchProjectDefs
-			- <sd_luciprod_research_luciprod.label>
-				Needed: Russian
-			- <sd_luciprod_research_luciprod.description>
-				Needed: Russian
+				Outdated: All (to be delated)
 	ThingCategoryDefs
 		MoG_IA_ThingCategories
 			- <ATR_MechanicalProducts.label>
@@ -293,11 +360,25 @@ DefInjected
 				Needed: /English/, German, Spanish, SpanishLatin
 			- <ATR_ContinuousTreadLeg.description>
 				Needed: /English/, German, Spanish, SpanishLatin
+				
 		MoG_IA_Furniture
 			- <ATR_ProductRefinementTable.label>
 				Needed: /English/, German, Spanish, SpanishLatin
 			- <ATR_ProductRefinementTable.description>
 				Needed: /English/, German, Spanish, SpanishLatin
+			- <sd_luciprod_distillery.label>
+				Needed: Russian
+				Outdated: Needed: /English/, German, Spanish, SpanishLatin
+			- <sd_luciprod_distillery.description>
+				Needed: Russian
+				Outdated: Needed: /English/, German, Spanish, SpanishLatin
+
+		sd_luciprod_ThingDefs_Buildings
+			- <sd_luciprod_mechstasispod.label>
+				Needed: Russian
+			- <sd_luciprod_mechstasispod.description>
+				Needed: Russian
+
 		MoG_IA_Product_Things
 			- <ATR_SteelFibres.label>
 				Needed: /English/, German, Spanish, SpanishLatin
@@ -319,24 +400,27 @@ DefInjected
 				Needed: /English/, German, Russian, Spanish, SpanishLatin
 			- <ATR_PolysynthopreneThread.description>
 				Needed: /English/, German, Russian, Spanish, SpanishLatin
-		sd_luciprod_ThingDefs_Buildings
-			- <sd_luciprod_distillery.label>
-				Needed: Russian
-			- <sd_luciprod_distillery.description>
-				Needed: Russian
-			- <sd_luciprod_mechstasispod.label>
-				Needed: Russian
-			- <sd_luciprod_mechstasispod.description>
-				Needed: Russian
-		sd_luciprod_ThingDefs_Items
+			- <ATR_UnfinishedHyperweave.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_UnfinishedHyperweave.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			
+			- <ATR_FilteredMechaniteOil.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <ATR_FilteredMechaniteOil.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <sd_luciprod_mechanite_oil.label>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
+			- <sd_luciprod_mechanite_oil.description>
+				Needed: /English/, German, Russian, Spanish, SpanishLatin
 			- <sd_luciprod_rawlucibatch.label>
 				Needed: Russian
+				Outdated: Needed: /English/, German, Spanish, SpanishLatin
 			- <sd_luciprod_rawlucibatch.description>
 				Needed: Russian
-			- <sd_luciprod_mechanite_oil.label>
-				Needed: Russian
-			- <sd_luciprod_mechanite_oil.description>
-				Needed: Russian
+				Outdated: Needed: /English/, German, Spanish, SpanishLatin
+
+		sd_luciprod_ThingDefs_Items
 			- <sd_luciprod_prep_mech_corpse.label>
 				Needed: Russian
 			- <sd_luciprod_prep_mech_corpse.description>
