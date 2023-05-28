@@ -283,6 +283,12 @@
 							</li>
 						</comps>
 					</value></li>
+			
+			<!-- Patch Workbench -->
+				<!-- ATR_DroneMineralUnit -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="ATR_MechPartWorkbench"]/graphicData/drawSize</xpath>
+					<value><drawSize>(3.45,1.5)</drawSize>					</value></li>
 			</operations>
 		</match>
 	</Operation>
